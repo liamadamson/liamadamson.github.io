@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #454545;
+}
+
+header {
+    text-align: center;
+    padding: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.7em;
+}
+
+
+main {
+    text-align: center;
+}
+
+#billboard h1 {
+    color: #FF6F59;
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+}
+
+#billboard h2 {
+    font-size: 1.8em;
+    font-weight: 300;
+    margin-bottom: 2.5em;
+}
+
+#contact a {
+    color: #FF6F59;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+    border-color: #FF6F59;
+    border-width: 1px;
+    border-style: solid;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact a:hover {
+    background-color: #FF6F59;
+    color: white;
+}
+
+
+
+footer {
+    font-size: 0.8em;
+    padding: 1.5em;
+    font-weight: 100;
+    text-align: center;
+}
