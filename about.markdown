@@ -1,18 +1,18 @@
 ---
-layout: page
+layout: single
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## Employment
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I'm currently an **Embedded Software Engineer** at Engie. I'm part of a team developing a new embedded Linux device for grid flexibility services across the UK and EU. On an typical day I'll be writing device firmware (in C, Rust and Python), updating our custom Yocto-based Linux distribution, and helping with project management.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Before joining Engie, I was:
+- A **Control Systems Engineer** and **R&D Team Lead** at *Octopus Energy*.
+- A **Research Assistant** at the *University of Liverpool*.
 
+## Education
 
-[jekyll-organization]: https://github.com/jekyll
+- **PhD in Control Engineering**, University of Liverpool
+- **BEng (Hons) in Mechanical Engineering - Class I**, University of Liverpool
