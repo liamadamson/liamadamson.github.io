@@ -4,10 +4,12 @@ description: |
   Embedded software engineer based in London, UK.
 email: liam@liamadamson.co.uk
 github_username: liamadamson
-theme: minimal-mistakes-jekyll
 domain: liamadamson.co.uk
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 url: https://www.liamadamson.co.uk
 minimal_mistakes_skin: "dark"
+plugins:
+  - jekyll-include-cache
 defaults:
 - scope:
     path: ""
