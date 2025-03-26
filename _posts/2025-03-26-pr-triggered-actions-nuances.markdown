@@ -13,9 +13,9 @@ For instance, when the workflow is triggered by a [push event](https://docs.gith
 
 So, what about `pull-request` triggers? I always assumed that it was the tip commit of the branch you want to merge (i.e. the head branch). It turns out that's wrong! In fact, when a pull request event occurs, a new temporary *pull request merge commit*  is created behind the scenes that includes the base branch commits and the head branch commits stacked on top. The `$GITHUB_SHA` variable is then set to this pull request merge commit.
 
-What this effectively means is that the checks you see running in your PR are testing against what it *would look like* if you merged your head branch (i.e. the thing you want to merge) into the base branch (i.e the thing you want to merge into) *at the moment the workflow is triggered*. 
+This means the checks you see running in your PR are testing what the code would look like if your head branch were merged into the base branch at the time the workflow is triggered
 
-Why is this important? Well, every time that a pull request workflow is triggered, the temporary merge branch is updated with commits in the head branch *and* any changes that may have been made in the base branch. So, even if you don't merge the base branch back into your head branch, they will be there when the pull request workflow is triggered again (e.g. by a change in your head branch)!
+Why is this important? Well, every time that a pull request workflow is triggered, the temporary merge branch is updated with commits in the head branch *and* any changes that may have been made in the base branch. So, even if you don't merge the base branch back into your head branch, any new base branch commits will be there when the pull request workflow is triggered again (i.e. by a change in your head branch)!
 
 Something to bear in mind when reviewing a PR is that pull request triggered workflows only run (by default) when:
 
@@ -23,4 +23,4 @@ Something to bear in mind when reviewing a PR is that pull request triggered wor
 2. a PR is reopened, after being closed
 3. a PR's head branch was updated
 
-Importantly, changes to the base branch ***do not*** cause the PR-triggered workflows to run again. So, just because your PR checks passed previously doesn’t mean they’ll pass if you run them again, especially if there have been changes to the base branch.
+Importantly, changes to the base branch ***do not*** cause the PR-triggered workflows to run again. So, just because your PR checks passed previously, it doesn’t mean they’ll pass later if you run them again, especially if there's been changes to the base branch.
